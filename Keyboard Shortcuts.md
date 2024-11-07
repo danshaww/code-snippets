@@ -40,3 +40,7 @@ Windows + Shift + C -- Open Colour Picker
 E -- Archive Email
 Hashtag -- Delete Email
 R -- Reply
+
+## Todoist
+Alt + Shift + Q -- Show/Hide Todoist
+Alt + Shift + W -- Quick Create Task
