@@ -1,0 +1,36 @@
+- name: Localhost Git Config
+  hosts: localhost
+  vars:
+    git: "~/git/"
+    repos:
+      - "git@github.com:epichouse/bash.git"
+      - "git@github.com:epichouse/bash.git"
+      - "git@github.com:epichouse/infrastructure.git"
+      - "git@github.com:epichouse/workflow-templates.git"
+      - "git@github.com:epichouse/snippets.git"
+      - "git@github.com:epichouse/.github-private.git"
+      - "git@github.com:epichouse/.github.git"
+      - "git@github.com:epichouse/docker-images.git"
+      - "git@github.com:epichouse/compose-templates.git"
+      - "git@github.com:epichouse/licenses.git"
+      - "git@github.com:epichouse/python.git"
+      - "git@github.com:epichouse/terraform.git"
+      - "git@github.com:epichouse/powershell.git"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-web"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-modules"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-shared"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-webserver"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-cloudflare"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/pipeline-templates"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
+  tasks:
+    - ansible.builtin.file:
+        path: "{{ git }}"
+        state: directory
+    - ansible.builtin.git:
+        repo: "{{ item }}"
+        dest: "{{ git }}/{{ item | basename | replace('.git', '') }}"
+        update: yes
+      ignore_errors: "{{ ansible_check_mode }}"
+      with_items: "{{repos}}"
