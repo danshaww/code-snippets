@@ -5,4 +5,6 @@ default:
 # Deploy WSL Config
 wsl: 
     ansible-playbook ./ansible/playbooks/wsl.yaml
-    
+
+create-dan:
+    "./linux/Create Dan User.sh"
