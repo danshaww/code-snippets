@@ -1,0 +1,12 @@
+#!/usr/bin/env just --justfile
+
+# Justfile examples
+
+default:
+    just --list
+
+nf:
+    neofetch
+
+of:
+    onefetch
