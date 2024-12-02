@@ -5,7 +5,7 @@
   # git - Development Git Repository Configuration
 
 - name: Localhost Git Config
-  hosts: localhost
+  hosts: all,localhost
   vars:
     git: "~/git/"
     repos:
