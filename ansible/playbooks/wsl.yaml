@@ -9,6 +9,7 @@
   vars:
     git: "~/git/"
     repos:
+      - "git@github.com:epichouse/md-docs.git"
       - "git@github.com:epichouse/bash.git"
       - "git@github.com:epichouse/bash.git"
       - "git@github.com:epichouse/infrastructure.git"
