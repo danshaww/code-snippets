@@ -15,8 +15,6 @@
       - "git@github.com:epichouse/infrastructure.git"
       - "git@github.com:epichouse/workflow-templates.git"
       - "git@github.com:epichouse/snippets.git"
-      - "git@github.com:epichouse/.github-private.git"
-      - "git@github.com:epichouse/.github.git"
       - "git@github.com:epichouse/docker-images.git"
       - "git@github.com:epichouse/compose-templates.git"
       - "git@github.com:epichouse/licenses.git"
