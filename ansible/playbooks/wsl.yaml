@@ -29,6 +29,7 @@
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-cloudflare"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/pipeline-templates"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
+      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-logging"
   tasks:
     - name: Global Utility Installation
       become: true
