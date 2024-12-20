@@ -15,3 +15,14 @@ git clone --bare git@gitea.internal.epichouse.co.uk:dan/snippets.git
 # CD into the bare clone before running this command.
 # This command can be used to restore a repository from my Gitea application files.
 git push --mirror git@gitea.internal.epichouse.co.uk:dan/snippets-restored.git
+
+
+
+### Tasks to reconfigure git home dir (setup SSH keys first)
+
+cd ~
+git init
+git remote add git@github.com:epichouse/home.git
+git pull origin main
+git branch --set-upstream-to=origin/main
+git pull
