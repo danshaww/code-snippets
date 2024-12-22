@@ -29,7 +29,7 @@
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-logging"
     ansible_repos:
-      - "git@github.com:epichouse/infrastructure.git"
+      - "git@github.com:epichouse/ansible-core.git"
       - "git@github.com:epichouse/ansible-dns.git"
       - "git@github.com:epichouse/ansible-docker.git"
       - "git@github.com:epichouse/ansible-storage.git"
