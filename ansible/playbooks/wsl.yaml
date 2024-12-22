@@ -31,6 +31,7 @@
     ansible_repos:
       - "git@github.com:epichouse/infrastructure.git"
       - "git@github.com:epichouse/ansible-dns.git"
+      - "git@github.com:epichouse/ansible-docker.git"
 
   tasks:
     - name: Utility Installation
