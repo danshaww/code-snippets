@@ -12,7 +12,6 @@
       - "git@github.com:epichouse/md-docs.git"
       - "git@github.com:epichouse/bash.git"
       - "git@github.com:epichouse/bash.git"
-      - "git@github.com:epichouse/infrastructure.git"
       - "git@github.com:epichouse/workflow-templates.git"
       - "git@github.com:epichouse/snippets.git"
       - "git@github.com:epichouse/docker-images.git"
@@ -30,36 +29,56 @@
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/pipeline-templates"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-logging"
+    ansible_repos:
+      - "git@github.com:epichouse/infrastructure.git"
+      - "git@github.com:epichouse/ansible-dns.git"
+
   tasks:
-    - name: Global Utility Installation
+    - name: Utility Installation
       become: true
       tags: apt
       ansible.builtin.apt:
         pkg: 
-        - git
-        - just
-        - neofetch
-        - stress
-        - fio
-        - gnupg
-        - curl
-        - ca-certificates
-        - unzip
-        - htop
-        - git
-        - net-tools
-        - nfs-common
-        - cifs-utils
-        - rsync
-        - tmux
-    - ansible.builtin.file:
+          - git
+          - just
+          - neofetch
+          - stress
+          - fio
+          - gnupg
+          - curl
+          - ca-certificates
+          - unzip
+          - htop
+          - git
+          - net-tools
+          - nfs-common
+          - cifs-utils
+          - rsync
+          - tmux
+          - ansible-lint
+    - name: Create Git Directory
+      ansible.builtin.file:
         path: "{{ git }}"
         state: directory
-      tags: git
-    - ansible.builtin.git:
+      tags: git,ansible
+    - name: Create Ansible Git Subdirectory
+      ansible.builtin.file:
+        path: "{{ git }}/ansible"
+        state: directory
+      tags: git,ansible
+    - name: Clone Standard Repos
+      ansible.builtin.git:
         repo: "{{ item }}"
         dest: "{{ git }}/{{ item | basename | replace('.git', '') }}"
         update: yes
       ignore_errors: "{{ ansible_check_mode }}"
-      with_items: "{{repos}}"
+      with_items: "{{ repos }}"
       tags: git
+    - name: Clone Ansible Repos
+      ansible.builtin.git:
+        repo: "{{ item }}"
+        dest: "{{ git }}/ansible/{{ item | basename | replace('.git', '') }}"
+        update: yes
+      ignore_errors: "{{ ansible_check_mode }}"
+      with_items: "{{ ansible_repos }}"
+      tags: git,ansible
