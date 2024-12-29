@@ -32,6 +32,8 @@
       - "git@github.com:epichouse/ansible-dns.git"
       - "git@github.com:epichouse/ansible-docker.git"
       - "git@github.com:epichouse/ansible-storage.git"
+      - "git@github.com:epichouse/ansible-software.git"
+
 
   tasks:
     - name: Utility Installation
