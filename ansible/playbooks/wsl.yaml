@@ -17,7 +17,6 @@
       - "git@github.com:epichouse/compose-templates.git"
       - "git@github.com:epichouse/licenses.git"
       - "git@github.com:epichouse/python.git"
-      - "git@github.com:epichouse/terraform.git"
       - "git@github.com:epichouse/powershell.git"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-web"
