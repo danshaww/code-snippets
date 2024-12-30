@@ -40,7 +40,7 @@
       become: true
       tags: apt
       ansible.builtin.apt:
-        pkg: 
+        pkg:
           - git
           - just
           - neofetch
