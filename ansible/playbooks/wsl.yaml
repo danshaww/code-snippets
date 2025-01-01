@@ -26,14 +26,13 @@
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-cloudflare"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/pipeline-templates"
       - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/app-snake"
-      - "git@ssh.dev.azure.com:v3/EpichouseCloud/DS/terraform-logging"
       - "git@github.com:epichouse/ansible-core.git"
       - "git@github.com:epichouse/ansible-dns.git"
       - "git@github.com:epichouse/ansible-docker.git"
       - "git@github.com:epichouse/ansible-storage.git"
       - "git@github.com:epichouse/ansible-software.git"
       - "git@github.com:epichouse/ansible-dev.git"
-
+### Add an alias for github & ADO to make this cleaner
   tasks:
     - name: Utility Installation
       become: true
