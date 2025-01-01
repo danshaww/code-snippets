@@ -32,7 +32,7 @@
       - "git@github.com:epichouse/ansible-docker.git"
       - "git@github.com:epichouse/ansible-storage.git"
       - "git@github.com:epichouse/ansible-software.git"
-
+      - "git@github.com:epichouse/ansible-dev.git"
 
   tasks:
     - name: Utility Installation
