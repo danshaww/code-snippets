@@ -26,3 +26,11 @@ git remote add git@github.com:epichouse/home.git
 git pull origin main
 git branch --set-upstream-to=origin/main
 git pull
+
+
+
+### Tag /retag a repo
+
+git tag $TAG # --force for retagging
+git push --tags
+git push $TAG
