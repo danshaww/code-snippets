@@ -1,7 +1,7 @@
-# NFS
+# NFS Mount Example
 nas:/mnt/FastPool/Software /mnt/nas/software  nfs      defaults    0       0
 
-# SMB
+# SMB Examples
 
 # Using a credential file stored in my home directory
 //nas/software  /mnt/nas/software-smb     cifs    credentials=/home/dan/.smb,vers=3.0,noperm 0 0

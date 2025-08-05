@@ -23,11 +23,8 @@ rsync -avh --no-perms -e ssh /home/dan/testfolder dan@vm-nginx-test-01:/home/dan
 rsync -avh --no-perms -e ssh /home/dan/testfolder dan@vm-nginx-test-01:/home/dan/testfolder --delete
 
 
-#Copy local file with progress (THIS IS SWEEEEET)
+# Copy local file with progress (THIS IS SWEEEEET)
 rsync --progress /path/to/source-file /path/to/destination
 
-
-
-####Retain Permissions for Docker Restores
-# Run as root on Backup Server
+# Retain Permissions for Docker Restores
 rsync -avzogp gitea dan@vm-app-prod-01:/docker/appstemp/ -r --rsync-path="sudo rsync"
