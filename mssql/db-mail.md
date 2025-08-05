@@ -1,3 +1,4 @@
+# Send email using dbmail via existing profile
 EXEC msdb.dbo.sp_send_dbmail
              @profile_name = 'Profile Name',
              @recipients = 'email@example.com',
