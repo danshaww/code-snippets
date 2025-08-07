@@ -12,7 +12,7 @@ tmux ls
 
 Detach and Close Session
 ```
-Ctrl B + d (In Session)
+Ctrl B + D (In Session)
 ```
 
 Exit and Close Session
