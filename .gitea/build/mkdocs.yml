@@ -6,7 +6,7 @@ repo_name: code-snippets
 theme:
   name: material
   logo: ../logo.png
-  favicon: ../logo.png
+  favicon: ../favicon.ico
   palette:
     - scheme: slate
       primary: black

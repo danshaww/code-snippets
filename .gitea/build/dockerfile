@@ -3,3 +3,4 @@ COPY snippets /docs/snippets/
 COPY .gitea/build/mkdocs.yml mkdocs.yml
 COPY .gitea/build/index.md /docs/snippets/index.md
 COPY .gitea/build/logo.png /docs/snippets/logo.png
+COPY .gitea/build/favicon.ico /docs/snippets/favicon.ico
