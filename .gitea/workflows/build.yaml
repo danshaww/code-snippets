@@ -33,12 +33,12 @@ jobs:
         run: docker build -t ${{ env.registry }}/${{ env.owner }}/${{ env.image_name }}:latest -f .gitea/build/dockerfile .
       - name: Push Docker Image
         run: docker push ${{ env.registry }}/${{ env.owner }}/${{ env.image_name }}:latest
-  # deploy:
-  #   runs-on: london
-  #   needs: build
-  #   defaults:
-  #     run:
-  #       working-directory: ./
-  #   steps:
-  #     - name: Pull latest image on ldnappprd1
-  #       run: ssh dan@ldnappprd1 "cd /srv/docker/apps/snippets && sudo docker compose pull && docker compose down && docker compose up -d"
+  deploy:
+    runs-on: london
+    needs: build
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - name: Pull latest image on ldnappprd1
+        run: ssh dan@ldnappprd1 "cd /srv/docker/apps/snippets && sudo docker compose pull && docker compose down && docker compose up -d"
