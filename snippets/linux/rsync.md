@@ -2,22 +2,22 @@
 
 Copy Contents of a folder into a folder on another server, without deleting files in destination that are not in source
 ```
-rsync -avh --no-perms -e ssh /home/dan/testfolder/ dan@vm-nginx-test-01:/home/dan/testfolder
+rsync -avh --no-perms -e ssh /dir_path user@host:/dir_path
 ```
 
 Copy Contents of a folder into a folder on another server, with deleting files in destination that are not in source
 ```
-rsync -avh --no-perms -e ssh /home/dan/testfolder/ dan@vm-nginx-test-01:/home/dan/testfolder --delete
+rsync -avh --no-perms -e ssh /dir_path user@host:/dir_path --delete
 ```
 
 Copy folder into a folder on another server, without deleting files in destination that are not in source (notice the slash missing)
 ```
-rsync -avh --no-perms -e ssh /home/dan/testfolder dan@vm-nginx-test-01:/home/dan/testfolder
+rsync -avh --no-perms -e ssh /dir_path user@host:/dir_path
 ```
 
 Copy folder into a folder on another server, with deleting files in destination that are not in source (notice the slash missing)
 ```
-rsync -avh --no-perms -e ssh /home/dan/testfolder dan@vm-nginx-test-01:/home/dan/testfolder --delete
+rsync -avh --no-perms -e ssh /dir_path user@host:/dir_path --delete
 ```
 
 Copy local file with progress (THIS IS SWEEEEET)
