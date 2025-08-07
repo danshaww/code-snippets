@@ -1,10 +1,16 @@
 # Unifi
 
-## Restart S2S VPN
+Restart S2S VPN
+```
 sudo ipsec restart
+```
 
-## Clear local DNS cache
+Clear local DNS cache
+```
 sudo clear dns forwarding cache
+```
 
-## IPSEC Logs
+IPSEC Logs
+```
 /var/log/charon.log
+```
