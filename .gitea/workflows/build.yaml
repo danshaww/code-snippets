@@ -1,0 +1,44 @@
+name: Build Snippets Docker Image
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  image_name: snippets
+  build_path: ./
+  registry: gitea.internal.epichouse.co.uk
+  owner: dan
+
+jobs:
+  build:
+    runs-on: london
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - name: Remove previous builds
+        run: docker image rm ${{ env.registry }}/${{ env.owner }}/${{ env.image_name }}:latest
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Create Index File
+        run: echo "# Home" > documentation/index.md
+      # - name: Move Images
+      #   run: mv ../images ../documentation
+      # - name: Build site with mkdocs
+      #   run: mkdocs build
+      - name: Authenticate with Gitea
+        run: docker login ${{ env.registry }} -u ${{ secrets.username }} -p ${{ secrets.password }}
+      - name: Build Docker Image
+        run: docker build -t ${{ env.registry }}/${{ env.owner }}/${{ env.image_name }}:latest -f .gitea/build/dockerfile .
+      - name: Push Docker Image
+        run: docker push ${{ env.registry }}/${{ env.owner }}/${{ env.image_name }}:latest
+  # deploy:
+  #   runs-on: london
+  #   needs: build
+  #   defaults:
+  #     run:
+  #       working-directory: ./
+  #   steps:
+  #     - name: Pull latest image on ldnappprd1
+  #       run: ssh dan@ldnappprd1 "cd /srv/docker/apps/snippets && sudo docker compose pull && docker compose down && docker compose up -d"

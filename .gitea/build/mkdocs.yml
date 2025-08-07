@@ -1,0 +1,14 @@
+site_name: Code Snippets
+docs_dir: /docs/snippets
+repo_url: https://gitea.internal.epichouse.co.uk/dan/code-snippets
+repo_name: code-snippets
+
+theme:
+  name: material
+  logo: ../images/homelab.png
+  favicon: ../images/homelab.png
+  palette:
+    - scheme: slate
+      primary: black
+extra:
+  generator: false
