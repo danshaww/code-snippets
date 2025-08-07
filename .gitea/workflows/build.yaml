@@ -22,7 +22,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Create Index File
-        run: echo "# Home" > documentation/index.md
+        run: echo "# Home" > snippets/index.md
       # - name: Move Images
       #   run: mv ../images ../documentation
       # - name: Build site with mkdocs
