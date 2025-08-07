@@ -1,1 +1,2 @@
+# Force Trim
 fsutil behavior set DisableDeleteNotify 0 ; defrag /o C:

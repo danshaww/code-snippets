@@ -1,4 +1,4 @@
-# View all roles assigned to all users in current database.
+# View DB Role Assignments
 
 SELECT    roles.principal_id                            AS RolePrincipalID
   ,    roles.name                                    AS RolePrincipalName

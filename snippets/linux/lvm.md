@@ -1,6 +1,8 @@
-# Shrink local-lvm on Proxmox
+# LVM
 
-# Delete Local-LVM Volume in GUI first
+## Shrink local-lvm on Proxmox
+
+## Delete Local-LVM Volume in GUI first
 
 
 lvresize -l +100%FREE /dev/pve/root

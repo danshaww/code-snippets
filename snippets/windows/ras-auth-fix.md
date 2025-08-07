@@ -1,3 +1,5 @@
+# RAS Auth Fix
+
 %userprofile%\AppData\Roaming\Microsoft\Network\Connections\PBK or C:\ProgramData\Microsoft\Network\Connections\Pbk).
 
 Right click on the VPN's .pbk file and open it with Notepad. (Remember to untick 'Always use this program for this file type')

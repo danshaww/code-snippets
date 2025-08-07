@@ -1,4 +1,4 @@
-# Guide on partitioning a new drive, creating and mounting filesystem
+# Mount Drive
 
 # List all devices + partitions to find new device
 lsblk -a

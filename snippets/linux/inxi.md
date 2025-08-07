@@ -1,10 +1,12 @@
-# INXI is a collection of handy command line tools that can be used to output information about the system in question.
+# INXI
 
-# Get Disks
+INXI is a collection of handy command line tools that can be used to output information about the system in question.
+
+## Get Disks
 inxi -xD
 
-# CPU Information
+## CPU Information
 inxi -C
 
-# System Information
+## System Information
 inxi -b

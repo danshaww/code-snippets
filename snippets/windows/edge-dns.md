@@ -1,2 +1,4 @@
-# Fancy DNS Page
+# Edge DNS
+
+## Fancy DNS Page
 edge://net-internals/#dns

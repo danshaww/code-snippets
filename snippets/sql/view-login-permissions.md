@@ -1,3 +1,5 @@
+# View Login Permissions
+
 SELECT DISTINCT pr.principal_id, pr.name, pr.type_desc, 
     pr.authentication_type_desc, pe.state_desc, pe.permission_name
 FROM sys.database_principals AS pr

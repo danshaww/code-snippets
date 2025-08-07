@@ -1,7 +1,7 @@
-# NGINX Commands
+# NGINX
 
-# Config Test
+## Config Test
 sudo nginx -T
 
-# Enable site
+## Enable site
 sudo ln sites-available/website.conf sites-enabled/website.conf && sudo systemctl reload nginx

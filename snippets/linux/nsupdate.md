@@ -1,4 +1,4 @@
-# nsupdate snippet
+# Nsupdate
 
 - The commands below are expected to be ran within the nsupdate shell
 - A send or return is required to apply the changes

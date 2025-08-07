@@ -1,11 +1,13 @@
-# Users List - /etc/passwd
-# Groups List - /etc/group	
+# User Management
 
-# New User
+## Users List - /etc/passwd
+## Groups List - /etc/group	
+
+## New User
 sudo adduser testuser
 
-# New Group
+## New Group
 sudo groupadd testgroup
 
-# Add User to Group
+## Add User to Group
 sudo usermod -aG testgroup testuser

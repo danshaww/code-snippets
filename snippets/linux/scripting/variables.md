@@ -1,19 +1,20 @@
-# Returning a value from a sub-script using echo
+# Variables
 
-##Calling Script
+## Returning a value from a sub-script using echo
+
+> Calling Script
 VMID=$(modules/get-next-vmid.sh)
 
-##Sub Script
+> Sub Script
 NextVMID=$(( $LatestVMID + 1 ))
 echo $NextVMID
 
 
 
-# Get variable on script execution
-#Variables
+## Get variable on script execution
 ID=$1
 
-#If ID is not set, script will ask for ID
+> If ID is not set, script will ask for ID
 if [ -z "$VMID" ]
 then
     echo ""
