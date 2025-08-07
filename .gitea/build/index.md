@@ -1,4 +1,4 @@
-# Home <img src="../images/homelab.png" width="40" align="right"/>
+# Home <img src="../logo.png" width="40" align="right"/>
 
 Welcome to my Homelab Documentation
 
