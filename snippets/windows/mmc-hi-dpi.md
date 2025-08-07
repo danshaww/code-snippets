@@ -1,0 +1,6 @@
+# MMC Hi-DPI
+
+The command below add's a reg key that enabled Hi-DPI support in MMC
+
+```reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Windows\System32\mmc.exe" /f /t REG_SZ /d "~ HIGHDPIAWARE"
+```

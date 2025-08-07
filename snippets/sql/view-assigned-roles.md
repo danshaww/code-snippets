@@ -1,5 +1,6 @@
 # View DB Role Assignments
 
+```
 SELECT    roles.principal_id                            AS RolePrincipalID
   ,    roles.name                                    AS RolePrincipalName
   ,    database_role_members.member_principal_id    AS MemberPrincipalID
@@ -10,3 +11,4 @@ JOIN sys.database_principals AS roles
 JOIN sys.database_principals AS members  
   ON database_role_members.member_principal_id = members.principal_id;  
 GO
+```

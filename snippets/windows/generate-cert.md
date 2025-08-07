@@ -1,2 +1,6 @@
 # Certificate Generation
+
+Generate a PFX Self signed certificate
+```
 New-SelfSignedCertificate -Subject *.internal.epichouse.co.uk -DnsName *.internal.epichouse.co.uk -CertStoreLocation Cert:\LocalMachine\My -NotAfter (Get-Date).AddMonths(120)
+```
