@@ -1,7 +1,7 @@
 # User Management
 
 Users List - /etc/passwd
-Groups List - /etc/group	
+Groups List - /etc/group
 
 New User
 ```

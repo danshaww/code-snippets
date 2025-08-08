@@ -1,2 +1,4 @@
 # Silent Login
+```
 touch ~/.hushlogin
+```

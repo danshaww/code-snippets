@@ -1,10 +1,16 @@
 # Expanding Archives
 
-## .tar file (use sudo to retain permissions)
+.tar file (use sudo to retain permissions)
+```
 tar xvf $filename
+```
 
-## .zst file
+.zst file
+```
 zstd -d $filename
+```
 
-## .zip file
+.zip file
+```
 unzip $filename
+```
