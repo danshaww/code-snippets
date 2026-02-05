@@ -9,6 +9,6 @@ theme:
   favicon: ../logo.png
   palette:
     - scheme: slate
-      primary: black
+      primary: blue
 extra:
   generator: false
