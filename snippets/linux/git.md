@@ -11,6 +11,16 @@ Mark all non executable .sh files as executable in git repository
 git add . --chmod=+x
 ```
 
+Reset changes
+```
+git reset --hard
+```
+
+Reset changes on individual file
+```
+git checkout {filepath}
+```
+
 Create a local bare copy of a repository. (snippets in this case)
 This will create a directory called snippets.git, containing the bare version of the repo rather than a working directory.
 ```
