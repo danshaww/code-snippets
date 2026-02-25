@@ -5,15 +5,15 @@
 
 Add A Record
 ```
-update add test.internal.epichouse.co.uk 3600 A 1.1.1.1
+update add test.epichouse.co.uk 3600 A 1.1.1.1
 ```
 
 Add CNAME Record
 ```
-update add test.internal.epichouse.co.uk 3600 CNAME record.something.com.
+update add test.epichouse.co.uk 3600 CNAME record.something.com.
 ```
 
 Delete Record
 ```
-update del test.internal.epichouse.co.uk
+update del test.epichouse.co.uk
 ```

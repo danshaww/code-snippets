@@ -33,4 +33,4 @@ jobs:
         working-directory: ./
     steps:
       - name: Pull latest image on ldnappprd1
-        run: ssh dan@ldnappprd1 "sudo docker compose -p snippets pull && docker compose -p snippets restart"
+        run: ssh dan@ldnappprd1 "cd /var/lib/docker/compose/snippets && sudo docker compose pull && docker compose down && docker compose up -d"
