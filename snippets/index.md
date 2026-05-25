@@ -1,1 +1,1 @@
-redirect: /snippets
+# Code Snippets
