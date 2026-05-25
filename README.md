@@ -1,8 +1,8 @@
 ## Code Snippets Repository
 
 ### Overview
-This repository contains code snippets & command examples for a range or technologies.
-All code in this repo is built using mkdocs.
+This repository contains code snippets & command examples for a range or technologies.  
+All code in this repo is built using Vitepress and hosted on https://snippets.epichouse.co.uk  
 
 ### Contents
 - Various common notes and keyboard shortcuts
