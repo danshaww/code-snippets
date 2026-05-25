@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 
 export default defineConfig({
-  title: 'Docs',
+  title: 'Snippets',
   description: 'A VitePress documentation site',
 
   rewrites: {
@@ -16,7 +16,7 @@ export default defineConfig({
 
     sidebar: generateSidebar({
       documentRootPath: 'docs',
-      collapsed: false,
+      collapsed: true,
       capitalizeFirst: true,
       useTitleFromFrontmatter: true,
       useTitleFromFileHeading: true,
