@@ -1,6 +1,34 @@
-FROM squidfunk/mkdocs-material
-COPY snippets /docs/snippets/
-COPY mkdocs.yml mkdocs.yml
-COPY index.md /docs/snippets/index.md
-COPY images/logo.png /docs/snippets/logo.png
-COPY images/favicon.ico /docs/snippets/favicon.ico
+# ── Stage 1: Resolve dependencies (generates lockfile) ────────────────────────
+FROM node:20-alpine AS deps
+
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+
+# ── Stage 2: Build ────────────────────────────────────────────────────────────
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy the lockfile and node_modules from the deps stage
+COPY --from=deps /app/package-lock.json ./
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./
+
+# Copy source and build
+COPY snippets/ ./docs/
+RUN npm run docs:build
+
+# ── Stage 3: Serve ────────────────────────────────────────────────────────────
+FROM nginx:alpine AS runner
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=builder /app/docs/.vitepress/dist /usr/share/nginx/html
+COPY favicon.ico /usr/share/nginx/html/
+COPY logo.png /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
