@@ -10,17 +10,13 @@ export default defineConfig({
   },
 
   themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-    ],
-
     sidebar: generateSidebar({
       documentRootPath: 'docs',
       collapsed: true,
       capitalizeFirst: true,
       useTitleFromFrontmatter: true,
       useTitleFromFileHeading: true,
-      excludePattern: ['index.md','images/*','snippets.md'],
+      excludePattern: ['snippets.md'],
     }),
 
     search: {
