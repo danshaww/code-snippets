@@ -1,0 +1,27 @@
+# Data Disks
+
+Disk Selection
+```
+sudo parted -l
+sudo parted /dev/sdb
+select /dev/sdb
+```
+
+Make GPT Partition Table
+```
+mklabel gpt
+print
+```
+
+Create partition, max size should be printed above
+```
+mkpart primary ext4 1MB 34GB
+quit
+```
+
+Create filesystem
+```
+sudo mkfs.ext4 /dev/sdb1
+```
+
+Once filesystem is created, the disk can be mounted via fstab
